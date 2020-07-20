@@ -1,4 +1,4 @@
-package com.cos.blog.model.user;
+package com.cos.blog.model;
 
 import java.sql.Timestamp;
 

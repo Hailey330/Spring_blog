@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cos.blog.model.user.User;
+import com.cos.blog.model.User;
 import com.cos.blog.repository.UserRepository;
 
 // Controller, Repository, Configuration, Service, Component
@@ -20,5 +20,10 @@ public class UserService {
 	public int 회원가입(User user) {
 		userRepository.save(user);
 		return 1;
+	}
+	
+	@Transactional(readOnly = true) // readOnly : 데이터 정합성
+	public User 로그인(User user) { 
+		return userRepository.login(user);
 	}
 }
