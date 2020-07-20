@@ -26,9 +26,8 @@
 		<div class="justify-content-between collapse navbar-collapse" id="collapsibleNavbar">
 
 			<ul class="navbar-nav">
-			
-						<li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">회원가입</a></li>
+						<li class="nav-item"><a class="nav-link" href="/auth/loginForm">로그인</a></li>
+						<li class="nav-item"><a class="nav-link" href="/auth/joinForm">회원가입</a></li>
 			</ul>
 		</div>
 	</nav>
