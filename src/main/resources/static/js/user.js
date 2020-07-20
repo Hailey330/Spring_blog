@@ -7,7 +7,6 @@ let index = {
 		},
 		
 		save: function(){
-			alert("btn-save 로직 실행");
 			// ajax 요청
 			let data = {
 					username: $("#username").val(),
@@ -25,10 +24,15 @@ let index = {
 				dataType: "json"
 				// dataType : 서버로부터 응답 받을 때 타입 지정  
 			}).done(function(resp){
+				if(resp.statusCode == 1) {
+					alert("회원가입을 축하합니다!");
+					location.href="/";
+				}
 				console.log(resp);
 				// console.log(JSON.parse(resp)); 
 				// dataType을 "text"로 설정했을 경우 : json → javascript 데이터로 변경해주는 함수 
 			}).fail(function(error){
+				alert("회원가입에 실패했습니다.")
 				console.log(error);
 			})
 		}
