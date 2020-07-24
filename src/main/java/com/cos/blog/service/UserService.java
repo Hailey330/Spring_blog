@@ -18,6 +18,7 @@ public class UserService {
 
 	@Transactional
 	public int 회원가입(User user) {
+		user.setRole("ROLE_USER");
 		userRepository.save(user);
 		return 1;
 	}
