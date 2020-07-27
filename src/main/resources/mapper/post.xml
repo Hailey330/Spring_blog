@@ -7,4 +7,7 @@
 		INSERT INTO post(title, content, createDate) 
 		VALUES(#{title}, #{content}, now())
 	</insert>
+	<select id="findAll" resultType="com.cos.blog.model.Post"> 
+		SELECT * FROM post ORDER BY id DESC
+	</select>
 </mapper>

@@ -12,7 +12,7 @@ public class IndexController {
 	// insert - PostMapping
 	@GetMapping({ "", "/" })
 	public String index() {
-		return "index";
+		return "redirect:/posts";
 	}
 	
 	@GetMapping("/auth/joinForm")
