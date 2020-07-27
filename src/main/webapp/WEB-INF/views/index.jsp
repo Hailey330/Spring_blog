@@ -17,10 +17,8 @@
     	<c:forEach var="post" items="${posts}">
       <tr>
         <td>${post.id}</td>
-        <td>${post.title}</td>
-        <td><fmt:formatDate var="dateParse" pattern="yyyy-MM-dd" value="${post.createDate}"/>
-        <c:out value="${dateParse}"/>
-        </td>
+        <td><a href="/post/${post.id}">${post.title}</a></td>
+        <td><fmt:formatDate pattern="yyyy-MM-dd" value="${post.createDate}"/></td>
       </tr>
       </c:forEach>
     </tbody>
